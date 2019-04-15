@@ -1,48 +1,8 @@
 
 <!-- saved from url=(0100)file:///C:/Users/X/Documents/js/%E5%A4%AA%E9%98%B3%E9%AB%98%E5%BA%A6%E8%A7%92%E8%AE%A1%E7%AE%97.html -->
 <html lang="zh-cmn-Hans"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="./太阳高度角计算_files/style.css">
-
-
-<title>太阳高度角、太阳方位角在线计算器,在线计算,在线计算器,计算器在线计算</title>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" href="style.css">
+<title>太阳高度角计算器</title>
 <style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
 .MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
 .MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
@@ -239,7 +199,6 @@
 <option value="-11">X (GMT - 11:00)</option>
 <option value="-12">Y (GMT - 12:00)</option>
 </select>
-
 </div>
 </div>
 <div class="form-group"><label class="col-sm-2 control-label">选择日期</label>
@@ -422,7 +381,7 @@
 <canvas id="pychart" style="margin:1px;" height="0px"></canvas>
 <h3 id="_1">使用说明</h3>
 <p>本应用在地理学中经常会碰到。实现了在线计算<a href="http://www.yunsuan.org/wiki/%E5%A4%AA%E9%98%B3%E9%AB%98%E5%BA%A6%E8%A7%92">太阳高度角</a>与<a href="http://www.yunsuan.org/wiki/%E5%A4%AA%E9%98%B3%E6%96%B9%E4%BD%8D%E8%A7%92">太阳方位角</a>的功能。</p>
-<p><img alt="太阳高度角立体图" src="./太阳高度角计算_files/6dfa04a4-f847-11e4-ba9a-00163e022551.gif"></p>
+<p><img alt="太阳高度角立体图" src="6dfa04a4-f847-11e4-ba9a-00163e022551.gif"></p>
 <p>方位角是以目标物（图中小房子）的正北方向为起算方向。计算旋转方式为：以目标物为轴心，以目标物的北方向为起始点，按顺时针方向旋转计算，一周，方位角逐步增大至360°。方位角的取值范围在0-360度。</p>
 <p>太阳高度角（英语为altitude of the sun），有时也被简称为太阳高度，是指某地的太阳光线与当地地平面的所交的最小线面角，这是以太阳视盘面的几何中心和理想地平线所夹的角度。在现在生活中，太阳高度解不会超过90度。</p>
 <h3 id="_2">注意事项</h3>
@@ -432,12 +391,7 @@
 
 </div>
 <div id="pycode"><script>
-//////////////////////////////////////
-// rollover.js
-//////////////////////////////////////
-// Copyright 2005 Christopher Gronbeck
-// christopher@susdesign.com
-//////////////////////////////////////
+
 function PopUp(filename, windowName, type) {
 switch (type) {
 case 'medium':
@@ -919,17 +873,7 @@ return (" " + integerPortionString + "." + decimalPortionString);
 var canvas = document.getElementById("pychart");
 canvas.setAttribute('height', '0px');
 </script>
-
 </div>
-
 </div>
-
 </div>
-
-
-
-
-
-
-
 </body></html>
