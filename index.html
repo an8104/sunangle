@@ -5,6 +5,16 @@
 	background-repeat: no-repeat;
 	height: 90px;
 }
+.container .row .col-md-9 .panel.panel-black .panel-body.panel-app .form-horizontal .form-group .col-sm-6 .row div {
+}
+.nyr {
+	height: 34px;
+	width: 3%;
+	float: left;
+	vertical-align: middle;
+	padding-top: 8px;
+	padding-left: -10px;
+}
 </style>
 <title>太阳高度角计算器</title>
 
@@ -140,8 +150,8 @@
 <option selected="">2019</option>
 <option>2020</option>
 <option>2021</option>
-</select> 年
-</div>
+</select> 
+</div><div class="nyr">年</div>
 <div class="col-sm-4">
 <select name="inputMonth" class="form-control">
 <option>1</option>
@@ -156,8 +166,8 @@
 <option>10</option>
 <option>11</option>
 <option>12</option>
-</select> 月
-</div>
+</select> 
+</div><div class="nyr">月</div>
 <div class="col-sm-4">
 <select name="inputDate" class="form-control">
 <option>1</option>
@@ -191,8 +201,8 @@
 <option>29</option>
 <option>30</option>
 <option>31</option>
-</select> 日
-</div>
+</select> 
+</div><div class="nyr">日</div>
 </div>
 </div>
 </div>
@@ -334,7 +344,7 @@ f.inputYear.options[i].selected = true;
 break;}}
 	//月设置选中的值
 for(var i=0; i<f.inputMonth.options.length; i++){
-if(f.inputMonth.options[i].innerHTML ==myDate.getMonth()){
+if(f.inputMonth.options[i].innerHTML ==myDate.getMonth()+1){
 f.inputMonth.options[i].selected = true;
 break;}}
 	//日设置选中的值
