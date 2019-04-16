@@ -10,7 +10,7 @@
 
 
 </head>
-<body><div id="MathJax_Message" style="display: none;"></div>
+<body  onLoad="init()"><div id="MathJax_Message" style="display: none;"></div>
 
 <div class="container">
 
@@ -29,7 +29,7 @@
 <div class="col-sm-6">
 <div class="row">
 <div class="col-sm-8">
-<input name="inputLongitude" class="form-control" onKeyPress="return NoEnter()" value="121" maxlength="10">
+<input name="inputLongitude" class="form-control" onKeyPress="return NoEnter()" value="" maxlength="10">
 </div>
 <div class="col-sm-4">
 <select name="inputEastWest" class="form-control">
@@ -45,7 +45,7 @@
 <div class="col-sm-6">
 <div class="row">
 <div class="col-sm-8">
-<input name="inputLatitude" class="form-control" onKeyPress="return NoEnter()" value="31" maxlength="10"></div>
+<input name="inputLatitude" class="form-control" onKeyPress="return NoEnter()" value="" maxlength="10"></div>
 <div class="col-sm-4">
 <select name="inputNorthSouth" class="form-control">
 <option selected="">北</option>
@@ -304,7 +304,46 @@
 </div>
 <a href="http://www.yunsuan.org/"><div class="logo"></div></a>
 <div id="pycode"><script>
+function init(){
+	var f = document.theForm;
+  // 获取到当前位置经纬度
 
+  if ("geolocation" in navigator) { var geo_options = { enableHighAccuracy: true, maximumAge: 0, timeout : 6000 };
+  navigator.geolocation.getCurrentPosition(
+  function(pos) { var lng = pos.coords.longitude; var lat = pos.coords.latitude; 	f.inputLatitude.value=lat; f.inputLongitude.value=lng; },
+	 function(err){  switch (error.code) { case 1: alert("位置服务被拒绝"); break; case 2: alert("暂时获取不到位置信息"); break; case 3: alert("获取信息超时"); break; case 4: alert("未知错误"); break; }
+ },
+	  geo_options);}
+//设置时间
+var myDate = new Date();
+/*myDate.getYear();        //获取当前年份(2位)
+myDate.getFullYear();    //获取完整的年份(4位,1970-????)
+myDate.getMonth();       //获取当前月份(0-11,0代表1月)
+myDate.getDate();        //获取当前日(1-31)
+myDate.getHours();       //获取当前小时数(0-23)
+myDate.getMinutes();     //获取当前分钟数(0-59)*/
+var h=myDate.getHours();
+var m=myDate.getMinutes();
+if(h<10){h="0"+h};
+if(m<10){h="0"+m};
+ f.inputTime.value=h+":"+m; //获取当前小时数(0-23)
+	//年设置选中的值
+for(var i=0; i<f.inputYear.options.length; i++){
+if(f.inputYear.options[i].innerHTML == myDate.getFullYear()){
+f.inputYear.options[i].selected = true;
+break;}}
+	//月设置选中的值
+for(var i=0; i<f.inputMonth.options.length; i++){
+if(f.inputMonth.options[i].innerHTML ==myDate.getMonth()){
+f.inputMonth.options[i].selected = true;
+break;}}
+	//日设置选中的值
+for(var i=0; i<f.inputDate.options.length; i++){
+if(f.inputDate.options[i].innerHTML ==myDate.getDate()){
+f.inputDate.options[i].selected = true;
+break;}}
+
+	}
 function PopUp(filename, windowName, type) {
 switch (type) {
 case 'medium':
