@@ -1,104 +1,9 @@
-
-<!-- saved from url=(0100)file:///C:/Users/X/Documents/js/%E5%A4%AA%E9%98%B3%E9%AB%98%E5%BA%A6%E8%A7%92%E8%AE%A1%E7%AE%97.html -->
 <html lang="zh-cmn-Hans"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="style.css">
 <title>太阳高度角计算器</title>
-<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
-.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
-.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
-.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
-</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_About.MathJax_MousePost {outline: none}
-.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-.MathJax_MenuItem {padding: 2px 2em; background: transparent}
-.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
-.MathJax_MenuActive .MathJax_MenuArrow {color: white}
-.MathJax_MenuArrow.RTL {left: .5em; right: auto}
-.MathJax_MenuCheck {position: absolute; left: .7em}
-.MathJax_MenuCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuRadioCheck {position: absolute; left: 1em}
-.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
-.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
-.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
-.MathJax_MenuDisabled {color: GrayText}
-.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
-.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
-.MathJax_ContextMenu:focus {outline: none}
-.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
-#MathJax_AboutClose {top: .2em; right: .2em}
-.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
-.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
-.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
-.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_MenuClose:hover span {background-color: #CCC!important}
-.MathJax_MenuClose:hover:focus {outline: none}
-</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
-</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
-.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
-</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
-#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-</style><style type="text/css">.MathJax_Preview {color: #888}
-#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
-#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
-.MathJax_Error {color: #CC0000; font-style: italic}
-</style><style type="text/css">.MJXp-script {font-size: .8em}
-.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
-.MJXp-bold {font-weight: bold}
-.MJXp-italic {font-style: italic}
-.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-largeop {font-size: 150%}
-.MJXp-largeop.MJXp-int {vertical-align: -.2em}
-.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
-.MJXp-display {display: block; text-align: center; margin: 1em 0}
-.MJXp-math span {display: inline-block}
-.MJXp-box {display: block!important; text-align: center}
-.MJXp-box:after {content: " "}
-.MJXp-rule {display: block!important; margin-top: .1em}
-.MJXp-char {display: block!important}
-.MJXp-mo {margin: 0 .15em}
-.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
-.MJXp-denom {display: inline-table!important; width: 100%}
-.MJXp-denom > * {display: table-row!important}
-.MJXp-surd {vertical-align: top}
-.MJXp-surd > * {display: block!important}
-.MJXp-script-box > *  {display: table!important; height: 50%}
-.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
-.MJXp-script-box > *:last-child > * {vertical-align: bottom}
-.MJXp-script-box > * > * > * {display: block!important}
-.MJXp-mphantom {visibility: hidden}
-.MJXp-munderover {display: inline-table!important}
-.MJXp-over {display: inline-block!important; text-align: center}
-.MJXp-over > * {display: block!important}
-.MJXp-munderover > * {display: table-row!important}
-.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
-.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
-.MJXp-mtr {display: table-row!important}
-.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
-.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-mlabeledtr {display: table-row!important}
-.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
-.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
-.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
-.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
-.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
-.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
-.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
-.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
-.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
-.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
-.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
-.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
-</style></head>
+
+
+</head>
 <body><div id="MathJax_Message" style="display: none;"></div>
 
 <div class="container">
@@ -118,7 +23,7 @@
 <div class="col-sm-6">
 <div class="row">
 <div class="col-sm-8">
-<input onkeypress="return NoEnter()" maxlength="10" name="inputLongitude" class="form-control">
+<input onKeyPress="return NoEnter()" maxlength="10" name="inputLongitude" class="form-control">
 </div>
 <div class="col-sm-4">
 <select name="inputEastWest" class="form-control">
@@ -129,12 +34,27 @@
 </div>
 </div>
 </div>
+
+<div class="form-group"><label class="col-sm-2 control-label">纬度</label>
+<div class="col-sm-6">
+<div class="row">
+<div class="col-sm-8">
+<input onKeyPress="return NoEnter()" maxlength="10" name="inputLatitude" class="form-control"></div>
+<div class="col-sm-4">
+<select name="inputNorthSouth" class="form-control">
+<option selected="">北</option>
+<option>南</option>
+</select>
+</div>
+</div>
+</div>
+</div>
 <div class="form-group">
 <label class="col-sm-2 control-label"> 选择时间制式 </label>
 <div class="col-sm-6">
 <div class="row">
 <div class="col-sm-8">
-<input onkeypress="return NoEnter()" maxlength="5" name="inputTime" class="form-control">
+<input name="inputTime" class="form-control" onKeyPress="return NoEnter()" value="12:00" maxlength="5">
 </div>
 <div class="col-sm-4">
 <select name="inputAMPM" class="form-control">
@@ -142,20 +62,6 @@
 <option>下午</option>
 <option selected="selected">24 时制</option>
 </select></div>
-</div>
-</div>
-</div>
-<div class="form-group"><label class="col-sm-2 control-label">纬度</label>
-<div class="col-sm-6">
-<div class="row">
-<div class="col-sm-8">
-<input onkeypress="return NoEnter()" maxlength="10" name="inputLatitude" class="form-control"></div>
-<div class="col-sm-4">
-<select name="inputNorthSouth" class="form-control">
-<option selected="">北</option>
-<option>南</option>
-</select>
-</div>
 </div>
 </div>
 </div>
@@ -222,33 +128,33 @@
 <option>2013</option>
 <option>2014</option>
 <option>2015</option>
-<option selected="">2016</option>
+<option>2016</option>
 <option>2017</option>
 <option>2018</option>
-<option>2019</option>
+<option selected="">2019</option>
 <option>2020</option>
 <option>2021</option>
 </select> 年
 </div>
 <div class="col-sm-4">
 <select name="inputMonth" class="form-control">
-<option selected="">1月</option>
-<option>2月</option>
-<option>3月</option>
-<option>4月</option>
-<option>5月</option>
-<option>6月</option>
-<option>7月</option>
-<option>8月</option>
-<option>9月</option>
-<option>10月</option>
-<option>11月</option>
-<option>12月</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option selected>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
 </select> 月
 </div>
 <div class="col-sm-4">
 <select name="inputDate" class="form-control">
-<option selected="">1</option>
+<option>1</option>
 <option>2</option>
 <option>3</option>
 <option>4</option>
@@ -263,7 +169,7 @@
 <option>13</option>
 <option>14</option>
 <option>15</option>
-<option>16</option>
+<option selected>16</option>
 <option>17</option>
 <option>18</option>
 <option>19</option>
@@ -288,8 +194,8 @@
 <label class="col-sm-2 control-label">选择基准时间</label>
 <div class="col-sm-6">
 <select name="inputTimeFormat" class="form-control">
-<option>时钟时</option>
-<option selected="">太阳时</option>
+<option selected>时钟时</option>
+<option>太阳时</option>
 </select>
 </div>
 </div>
@@ -306,7 +212,7 @@
 <div class="col-sm-6">
 <div class="row">
 <div class="col-sm-8">
-<input onkeypress="return NoEnter()" maxlength="5" class="form-control" name="inputElevation">
+<input onKeyPress="return NoEnter()" maxlength="5" class="form-control" name="inputElevation">
 </div>
 <div class="col-sm-4">
 <select name="inputFeetMeters" class="form-control">
@@ -327,50 +233,50 @@
 </div>
 <div class="form-group"><label class="col-sm-2 control-label"></label>
 <div class="col-sm-6">
-<input onclick="return CheckInputs();" type="submit" value=" 计算 " class="btn btn-primary"></div>
+<input onClick="return CheckInputs();" type="submit" value=" 计算 " class="btn btn-primary"></div>
 </div>
 <hr>
 <div class="form-group"><label class="col-sm-2 control-label">太阳高度角</label>
 <div class="col-sm-6">
-<input onkeypress="return NoEnter()" maxlength="10" size="10" name="outputAltitude" readonly="" class="form-control">
+<input onKeyPress="return NoEnter()" maxlength="10" size="10" name="outputAltitude" readonly class="form-control">
 </div>
 </div>
 <div class="form-group"><label class="col-sm-2 control-label">偏差</label>
 <div class="col-sm-6">
-<input onkeypress="return NoEnter()" maxlength="10" size="10" name="outputDeclination" readonly="" class="form-control"></div>
+<input onKeyPress="return NoEnter()" maxlength="10" size="10" name="outputDeclination" readonly class="form-control"></div>
 </div>
 <div class="form-group"><label class="col-sm-2 control-label">太阳方位角</label>
 <div class="col-sm-6">
-<input onkeypress="return NoEnter()" maxlength="10" size="10" name="outputAzimuth" readonly="" class="form-control">
+<input onKeyPress="return NoEnter()" maxlength="10" size="10" name="outputAzimuth" readonly class="form-control">
 </div>
 </div>
 <div class="form-group"><label class="col-sm-2 control-label">时差</label>
 <div class="col-sm-6">
-<input onkeypress="return NoEnter()" maxlength="10" size="10" name="outputEOT" readonly="" class="form-control">
+<input onKeyPress="return NoEnter()" maxlength="10" size="10" name="outputEOT" readonly class="form-control">
 </div>
 </div>
 <div class="form-group"><label class="col-sm-2 control-label">时钟时间</label>
 <div class="col-sm-6">
-<input onkeypress="return NoEnter()" maxlength="10" size="10" name="outputClockTime" readonly="" class="form-control"></div>
+<input onKeyPress="return NoEnter()" maxlength="10" size="10" name="outputClockTime" readonly class="form-control"></div>
 </div>
 <div class="form-group"><label class="col-sm-2 control-label">日出时间</label>
 <div class="col-sm-6">
-<input onkeypress="return NoEnter()" maxlength="10" size="10" name="outputSunrise" readonly="" class="form-control">
+<input onKeyPress="return NoEnter()" maxlength="10" size="10" name="outputSunrise" readonly class="form-control">
 </div>
 </div>
 <div class="form-group"><label class="col-sm-2 control-label">太阳时</label>
 <div class="col-sm-6">
-<input onkeypress="return NoEnter()" maxlength="10" size="10" name="outputLSOT" readonly="" class="form-control">
+<input onKeyPress="return NoEnter()" maxlength="10" size="10" name="outputLSOT" readonly class="form-control">
 </div>
 </div>
 <div class="form-group"><label class="col-sm-2 control-label">日落时间</label>
 <div class="col-sm-6">
-<input onkeypress="return NoEnter()" maxlength="10" size="10" name="outputSunset" readonly="" class="form-control">
+<input onKeyPress="return NoEnter()" maxlength="10" size="10" name="outputSunset" readonly class="form-control">
 </div>
 </div>
 <div class="form-group"><label class="col-sm-2 control-label">时角</label>
 <div class="col-sm-6">
-<input onkeypress="return NoEnter()" maxlength="10" size="10" name="outputHourAngle" readonly="" class="form-control"></div>
+<input onKeyPress="return NoEnter()" maxlength="10" size="10" name="outputHourAngle" readonly class="form-control"></div>
 </div>
 </form>
 
@@ -378,7 +284,7 @@
 
 
 <div class="panel-body">
-<canvas id="pychart" style="margin:1px;" height="0px"></canvas>
+
 <h3 id="_1">使用说明</h3>
 <p>本应用在地理学中经常会碰到。实现了在线计算<a href="http://www.yunsuan.org/wiki/%E5%A4%AA%E9%98%B3%E9%AB%98%E5%BA%A6%E8%A7%92">太阳高度角</a>与<a href="http://www.yunsuan.org/wiki/%E5%A4%AA%E9%98%B3%E6%96%B9%E4%BD%8D%E8%A7%92">太阳方位角</a>的功能。</p>
 <p><img alt="太阳高度角立体图" src="6dfa04a4-f847-11e4-ba9a-00163e022551.gif"></p>
@@ -797,21 +703,22 @@ function NormalizeTo24(theThing) {
 return (theThing - Math.floor(theThing / 24.0) * 24);
 }
 function MonthStringToDays(whichMonth) {
-if (whichMonth == "1月") return (0);
-if (whichMonth == "2月") return (31);
-if (whichMonth == "3月") return (59);
-if (whichMonth == "4月") return (90);
-if (whichMonth == "5月") return (120);
-if (whichMonth == "6月") return (151);
-if (whichMonth == "7月") return (181);
-if (whichMonth == "8月") return (212);
-if (whichMonth == "9月") return (243);
-if (whichMonth == "10月") return (273);
-if (whichMonth == "11月") return (304);
-if (whichMonth == "12月") return (334);
+if (whichMonth == "1") return (0);
+if (whichMonth == "2") return (31);
+if (whichMonth == "3") return (59);
+if (whichMonth == "4") return (90);
+if (whichMonth == "5") return (120);
+if (whichMonth == "6") return (151);
+if (whichMonth == "7") return (181);
+if (whichMonth == "8") return (212);
+if (whichMonth == "9") return (243);
+if (whichMonth == "10") return (273);
+if (whichMonth == "11") return (304);
+if (whichMonth == "12") return (334);
 return ("Zeke the Solar Cat"); // you can't get here but I swear it made me do this
 }
 function MonthStringToMonthNum(whichMonth) {
+return(whichMonth);
 if (whichMonth == "1月") return (1);
 if (whichMonth == "2月") return (2);
 if (whichMonth == "3月") return (3);
@@ -824,6 +731,7 @@ if (whichMonth == "9月") return (9);
 if (whichMonth == "10月") return (10);
 if (whichMonth == "11月") return (11);
 if (whichMonth == "12月") return (12);
+
 return ("Zeke the Solar Cat"); // you can't get here but I swear it made me do this
 }
 function RemoveSemicolon(inputString) {
@@ -869,10 +777,7 @@ return (" " + integerPortionString + "." + decimalPortionString);
 }
 }
 </script></div>
-<script type="text/javascript">
-var canvas = document.getElementById("pychart");
-canvas.setAttribute('height', '0px');
-</script>
+
 </div>
 </div>
 </div>
