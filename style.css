@@ -88,11 +88,7 @@ input {
   }
 
 }
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url(font-path("bootstrap/glyphicons-halflings-regular.eot"));
-  src: url(font-path("bootstrap/glyphicons-halflings-regular.eot?#iefix")) format("embedded-opentype"), url(font-path("bootstrap/glyphicons-halflings-regular.woff2")) format("woff2"), url(font-path("bootstrap/glyphicons-halflings-regular.woff")) format("woff"), url(font-path("bootstrap/glyphicons-halflings-regular.ttf")) format("truetype"), url(font-path("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular")) format("svg");
-}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -113,7 +109,7 @@ html {
 }
  
 body {
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.42857143;
 	color: #333333;
 	background-color: #fff;
@@ -187,8 +183,7 @@ p {
 }
 
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
+
 } 
 .row:before, .row:after {
   content: " ";
@@ -200,37 +195,63 @@ p {
  
 .col-sm-2, .col-sm-4, .col-sm-6, .col-sm-8, .col-md-9 {
 	min-height: 1px;
-	padding-left: 15px;
-	padding-right: 15px;
+		
+	
 }
 
 @media (min-width: 786px) {
-	  .container {
-    width: 500px;
-  }
+
   .col-sm-2, .col-sm-4, .col-sm-6, .col-sm-8 {
     float: left;
 	
   }
 
   .col-sm-2 {
-	width: 22%;
+	width: 6rem;
   }
 
    .col-sm-4 {
-    width: 29%;
+    width: 11rem;
   }
-
+  .col-sm-5 {
+	width: 6rem;
+  }
   .col-sm-6 {
-	width: 78%;
+	width: 22rem;
   }
 
   .col-sm-8 {
-    width: 71%;
+    width: 12rem;
+  }
+.control-label{width: 7rem;}
+}
+   .container {
+	margin: 5px;
+
+  }
+    @media (max-width: 785px){
+		.row {
+	margin: 0px;
+}
+   .container {
+    width: 25rem;
+  }
+  .col-sm-6 .col-sm-4 .col-sm-8{
+    
+	width: 80%;
+	
   }
 
-}
+  .col-sm-2 {
+	width: 50%;float: left;
+  }
 
+ 
+.control-label{
+	width: 100%;
+	float: none;
+}
+    }
 
   .col-md-9 {
 
@@ -245,9 +266,9 @@ label {
 .form-control {
 	display: block;
 	width: 100%;
-	height: 34px;
+	height: 1.5rem;
 	padding: 3px;
-	font-size: 14px;
+	font-size: 1rem;
 	line-height: 1.42857143;
 	color: #555555;
 	background-color: #fff;
@@ -312,7 +333,7 @@ label {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 6px;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.42857143;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -373,7 +394,9 @@ label {
 }
  
 .panel-body {
-  padding: 15px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin: 10px;
 } 
 .panel-body:before, .panel-body:after {
   content: " ";
