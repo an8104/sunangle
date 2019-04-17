@@ -8,7 +8,18 @@ html {
 body {
   margin: 0;
 }
- 
+
+.logo {
+	background-image: url(http://www.yunsuan.org/static/tass/images/logo.png);
+	background-repeat: no-repeat;
+	height: 90px;
+}
+
+.nyr {
+	height: 2rem;
+	width: 1rem;
+	float: left;	
+} 
 a {
   background-color: transparent;
 }
@@ -171,16 +182,7 @@ p {
 .container:after {
   clear: both;
 }
-@media (min-width: 992px) { 
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) { 
-  .container {
-    width: 1170px;
-  }
-}
+
 
 .row {
 
@@ -200,7 +202,9 @@ p {
 }
 
 @media (min-width: 786px) {
-
+    html {
+	    font-size:20px;
+    }
   .col-sm-2, .col-sm-4, .col-sm-6, .col-sm-8 {
     float: left;
 	
@@ -230,11 +234,14 @@ p {
 
   }
     @media (max-width: 785px){
+		    html {
+	    font-size:30px;
+    }
 		.row {
 	margin: 0px;
 }
    .container {
-    width: 25rem;
+    width: 98%;
   }
   .col-sm-6 .col-sm-4 .col-sm-8{
     
