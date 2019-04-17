@@ -203,7 +203,7 @@ p {
 
 @media (min-width: 786px) {
     html {
-	    font-size:20px;
+	    font-size:16px;
     }
   .col-sm-2, .col-sm-4, .col-sm-6, .col-sm-8 {
     float: left;
@@ -211,21 +211,21 @@ p {
   }
 
   .col-sm-2 {
-	width: 6rem;
+	width: 5rem;
   }
 
    .col-sm-4 {
     width: 11rem;
   }
   .col-sm-5 {
-	width: 6rem;
+	width: 3rem;
   }
   .col-sm-6 {
-	width: 22rem;
+	width: 14rem;
   }
 
   .col-sm-8 {
-    width: 12rem;
+    width: 9rem;
   }
 .control-label{width: 7rem;}
 }
@@ -235,28 +235,32 @@ p {
   }
     @media (max-width: 785px){
 		    html {
-	    font-size:30px;
+	    font-size:18px;
     }
-		.row {
-	margin: 0px;
-}
-   .container {
-    width: 98%;
-  }
-  .col-sm-6 .col-sm-4 .col-sm-8{
-    
-	width: 80%;
+  .col-sm-2, .col-sm-4, .col-sm-6, .col-sm-8 {
+    float: left;
 	
   }
 
   .col-sm-2 {
-	width: 50%;float: left;
+	width: 4rem;
   }
 
- 
-.control-label{
-	width: 100%;
-	float: none;
+   .col-sm-4 {
+    width: 11rem;
+  }
+  .col-sm-5 {
+	width: 3rem;
+  }
+  .col-sm-6 {
+	width: 11rem;
+  }
+
+  .col-sm-8 {
+    width: 7rem;
+  }
+.control-label{width: 7rem;}
+	
 }
     }
 
